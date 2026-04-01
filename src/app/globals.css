@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter);
+  
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* Primary Brand - Gradient Green to Blue range */
+  --color-primary-50: #effdf5;
+  --color-primary-100: #d9fbe5;
+  --color-primary-200: #b5f5cc;
+  --color-primary-300: #80eaad;
+  --color-primary-400: #46d887;
+  --color-primary-500: #20bc69;
+  --color-primary-600: #149a53;
+  --color-primary-700: #127a44;
+  --color-primary-800: #136038;
+  --color-primary-900: #114f30;
+  --color-primary-950: #092c1b;
+
+  /* Accent - Neon Green */
+  --color-accent: #39ff14;
+
+  /* Additional Custom Colors based on iOS Health app vibes */
+  --color-surface: #ffffff;
+  --color-surface-hover: #f9fafa;
+  --color-card: #ffffff;
+  --color-card-border: #eef1f4;
+  
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-3xl: 2rem;
+  
+  --shadow-soft: 0 4px 24px -6px rgba(0, 0, 0, 0.04);
+  --shadow-glow: 0 0 20px rgba(32, 188, 105, 0.4);
+}
+
+:root {
+  --background: #f8fafc; /* Soft white/gray background */
+  --foreground: #0f172a; /* Slate 900 */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #020617; /* Slate 950 */
+    --foreground: #f8fafc;
+  }
+  @theme {
+    --color-surface: #0f172a;
+    --color-surface-hover: #1e293b;
+    --color-card: #0f172a;
+    --color-card-border: #1e293b;
+    --shadow-soft: 0 4px 24px -6px rgba(0, 0, 0, 0.4);
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Utilities */
+.glassmorphism {
+  background: white; /* Fallback */
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@media (prefers-color-scheme: dark) {
+  .glassmorphism {
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-primary-400), #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-gradient-brand {
+  background: linear-gradient(135deg, var(--color-primary-500), #3b82f6);
+}
