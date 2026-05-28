@@ -121,16 +121,16 @@ export default function Login() {
       >
         <div className="flex flex-col items-center mb-8">
           <Link href="/" className="w-20 h-20 rounded-3xl bg-white dark:bg-slate-800 shadow-glow p-4 mb-4 flex items-center justify-center border border-card-border hover:scale-105 transition-transform">
-            <img src="/logo.png" alt="NutriScan Logo" className="w-full h-full object-contain" />
+            <img src="/logo.png" alt="RipeScan Logo" className="w-full h-full object-contain" />
           </Link>
           <h1 className="text-3xl font-bold text-slate-900 dark:text-white">
-            {authMode === "login" ? "NutriScan" : authMode === "register" ? "Daftar Akun" : "Reset Password"}
+            {authMode === "login" ? "RipeScan" : authMode === "register" ? "Daftar Akun" : "Reset Password"}
           </h1>
           <p className="text-slate-500 dark:text-slate-400 font-medium text-center mt-1">
             {authMode === "login" 
               ? "Masuk untuk melanjutkan perjalanan sehatmu" 
               : authMode === "register" 
-                ? "Mulai hidup lebih sehat dengan NutriScan hari ini"
+                ? "Mulai hidup lebih sehat dengan RipeScan hari ini"
                 : "Masukkan email Anda untuk menerima link reset"}
           </p>
         </div>

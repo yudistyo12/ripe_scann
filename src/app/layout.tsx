@@ -8,8 +8,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "NutriScan",
-  description: "AI-Powered Nutrition & Diet Tracker",
+  title: "RipeScan",
+  description: "AI-Powered Food Ripeness & Quality Tracker",
 };
 
 export default function RootLayout({
